@@ -1,0 +1,17 @@
+{
+	"name": "Create Views Gold",
+	"properties": {
+		"content": {
+			"query": "CREATE VIEW gold.Calender\nAS\nSELECT *\nFROM \n    OPENROWSET\n    (\n        BULK  'https://storagedatalakeawp.dfs.core.windows.net/silver/AdventureWorks_Calendar/',\n        FORMAT = 'PARQUET'\n    )AS query1\n\n\n---------\n\nCREATE VIEW gold.products\nAS\nSELECT *\nFROM \n    OPENROWSET\n    (\n        BULK  'https://storagedatalakeawp.dfs.core.windows.net/silver/AdventureWorks_Products/',\n        FORMAT = 'PARQUET'\n    )AS query1\n\n---------\n\nCREATE VIEW gold.returns\nAS\nSELECT *\nFROM \n    OPENROWSET\n    (\n        BULK  'https://storagedatalakeawp.dfs.core.windows.net/silver/AdventureWorks_Returns/',\n        FORMAT = 'PARQUET'\n    )AS query1\n\n-------\n\nCREATE VIEW gold.customers\nAS\nSELECT *\nFROM \n    OPENROWSET\n    (\n        BULK  'https://storagedatalakeawp.dfs.core.windows.net/silver/AdventureWorks_Customers/',\n        FORMAT = 'PARQUET'\n    )AS query1  \n\n------\n\nCREATE VIEW gold.sales\nAS\nSELECT *\nFROM \n    OPENROWSET\n    (\n        BULK  'https://storagedatalakeawp.dfs.core.windows.net/silver/AdventureWorks_Sales/',\n        FORMAT = 'PARQUET'\n    )AS query1  \n\n---------\n\nCREATE VIEW gold.territories\nAS\nSELECT *\nFROM \n    OPENROWSET\n    (\n        BULK  'https://storagedatalakeawp.dfs.core.windows.net/silver/AdventureWorks_Territories/',\n        FORMAT = 'PARQUET'\n    )AS query1\n\n------\n\nCREATE VIEW gold.subcat\nAS\nSELECT *\nFROM \n    OPENROWSET\n    (\n        BULK  'https://storagedatalakeawp.dfs.core.windows.net/silver/Product_Subcategories/',\n        FORMAT = 'PARQUET'\n    )AS query1\n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "awpdatabase",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
