@@ -1,0 +1,9 @@
+{
+	"name": "adf-aw-project-ssr",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e6f72b01-f6df-43f0-996d-1e266bdd7f85",
+		"tenantId": "7e5412e0-a46d-429b-a1ad-e3c6d3f8246d"
+	}
+}
